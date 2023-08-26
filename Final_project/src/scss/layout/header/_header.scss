@@ -1,0 +1,98 @@
+header{
+    .container{
+        max-width: 1400px;
+        .banner{
+            height: 72px;
+            
+            flex-basis: 100%;
+
+             @include Flex($all_items:center,$justfy:space-between,$gap:20px);
+            &_left_side{
+                @include Flex($all_items:center,$justfy:center);
+
+                margin-top: 7px;
+
+                a{
+                    text-decoration: none;
+                    h1{
+                        @extend %extend_h1;
+                    
+                    }
+                }
+               
+                    flex-basis: 321px;
+                }
+            &_center{
+                @include Flex($all_items:start,$justfy:start,);
+                margin-top: 15px;
+                flex-basis: 600px;
+                ul{
+                    @include Flex($all_items:start,$justfy:center,$gap:40px, $direction:row);
+                   
+                    a{
+                        text-decoration: none;
+                        cursor: pointer;
+                        li{
+                           @extend %extend_li;
+                        }
+                    }
+                }
+               
+
+            }  
+            &_serach{
+            
+           
+                a{
+                    width: 24px;
+                    height: 24px;
+                    text-decoration: none;
+                }
+
+            } 
+            &_btn{
+                width: 128px;
+                background: $primary_color;
+                border-radius: 24px;
+                padding: 8px 24px;
+                @include Flex( $justfy:center, $all_items:center);
+                button{
+                
+                   @extend %extend_banner_btn;
+                }
+            }
+            &_notification{
+                svg{
+                    width: 24px;
+                    height: 24px;
+                    object-fit: fill;
+                }
+               
+            }
+            &_prof{
+                @include Flex( $justfy:center, $all_items:center);
+
+                width: 32px;
+                height: 32px;
+              
+                
+                img{
+                    border-radius: 50%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+                .banner_arrow{
+               
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                        object-fit: fill;
+                    }
+                }
+            }
+            
+
+            }
+
+        }
+    }

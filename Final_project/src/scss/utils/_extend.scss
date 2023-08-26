@@ -1,0 +1,38 @@
+%extend_h1{
+                    color: $black_color;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: 0.1px;
+}
+%extend_li{
+    font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; 
+letter-spacing: 0.08px;
+color: $black_color;
+}
+%extend_banner_btn{
+    background: #B43FEB;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    border: none;
+    color: #F9F9F9;
+}
+%extend_li_menu{
+    font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; 
+letter-spacing: 0.08px;
+color: $menu_color;
+}
