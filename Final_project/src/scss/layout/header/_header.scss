@@ -56,9 +56,11 @@ header{
                 border-radius: 24px;
                 padding: 8px 24px;
                 @include Flex( $justfy:center, $all_items:center);
-                button{
+                a{cursor: pointer;
+                    button{
                 
-                   @extend %extend_banner_btn;
+                        @extend %extend_banner_btn;
+                     }
                 }
             }
             &_notification{

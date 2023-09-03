@@ -1,0 +1,311 @@
+main{
+    #topmove{
+        .container{
+            .menu_side_bar{
+                background-color: #E9EBED;
+                @include Flex($all_items:center,$justfy:center,$direction:column);
+                ul{
+                   
+                    @extend %extend_li_menu;
+                    @include Flex($all_items:start,$justfy:center,$direction:column,$gap:16px );
+                    
+    
+                    a{
+                        text-decoration: none;
+                        
+                        li{
+                            @include Flex($all_items:center,$gap:28px );
+                           
+                            width: 257px;   
+                            padding: 8px 0px;
+                            
+                            @extend %extend_li_menu;
+                            .tooggle{
+                                position: relative;
+                                border-radius: 100px;
+                                box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+                                width: 45px;
+                                height: 25px;
+                                background-color: #125ba3;
+                                @include Flex($all_items:start,$justfy:center, );
+                                cursor: pointer;
+                                .switch{
+                                    position: relative;
+                                    height: 20px;
+                                    width: 40px;
+                                    display: inline-block;
+                                    background-color: #125ba3;
+                                    border-radius: 50%;
+                                }
+                                .switch::before{
+                                    content: "";
+                                    position: absolute;
+                                    height: 20px;
+                                    width: 20px;
+                                    background-color: #e4e6e7;
+                                    border-radius: 50%;
+                                    transform: translateY(-50%);
+                                    top: 61%;
+                                    transition: 0.3s ease-in-out;
+                                    
+                                }
+                                body .dark .switch::before{
+        
+                                    left: 20px;
+                                }
+                            }
+     
+      
+                           
+                           
+                        }
+                        li:hover{
+                            color: $black_color;
+                            svg{
+                                color: $primary_color;
+                            }
+                        }
+                    }
+                }
+    
+    
+            }
+            .top_rated{
+                @include Flex ($all_items:start, $justfy:start, $direction:column,$gap:10px);
+                .films_number{
+                    @include Flex ($all_items:center, $justfy:start, $direction:row,$gap:10px);
+                    .top_films{
+                        @include Flex ($all_items:center, $justfy:start, $direction:row,$gap:10px);
+                        .top_number{
+                            span{
+                                color: #171725;
+                                font-family: $font_family;
+                                font-size: 56px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 64px; 
+                                letter-spacing: 0.28px;
+                            }
+                        }
+                        .top_films_images{
+                            width: 112px;
+                            height: 154px;
+                            border-radius: 16px;
+                            overflow: hidden;
+                            a{  
+                                cursor: pointer;
+                                text-decoration: none;
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                          
+                            }
+                        .top_films_comment{
+                            @include Flex ($all_items:start, $justfy:start, $direction:column,$gap:10px);
+                            .top_films_text{
+                                p{
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 20px; 
+                                    letter-spacing: 0.06px;
+                                    font-family: $font_family;
+                                    color: #9CA4AB;
+                                }
+                            }
+                            .top_films_name{
+                                h2{
+                                    
+                                        overflow: hidden;
+                                        color: #171725;
+                                        text-overflow: ellipsis;
+                                        whitespace: nowrap;
+    
+                                        font-family:$font_family;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        line-height: 24px;
+                                        letter-spacing: 0.08px;
+                                }
+                            }
+                            .top_films_through{
+                                @include Flex ($all_items:center, $justfy:start, $direction:row,$gap:5px);
+                                svg{
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 20px; 
+                                letter-spacing: 0.06px;
+                                color: #78828A;
+                                font-family: $font_family;
+    
+                            }
+                            .top_films_raiting{
+                                @include Flex ($all_items:center, $justfy:start, $direction:row,$gap:5px);
+                                svg{
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                                color: #171725;
+                                font-family: $font_family;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;
+                                letter-spacing: 0.12px;
+                                font-feature-settings: 'clig' off, 'liga' off;
+                                
+                            }
+                        }    
+    
+                    }
+                }
+               
+                
+            }
+            .product{
+                .product_toptext{
+                    h1{
+
+                        font-family:$font_family;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 32px;
+                        letter-spacing: 0.12px;
+                        color: #171725;
+
+                    }
+                }
+                .product_images{
+                    .product_images_top{
+                        @include Flex ($all_items:center,$justfy:start,$direction:row,$gap:24px);
+                        .product_items{
+                            @include Flex ($all_items:start,$justfy:center,$direction:column,$gap:0);
+                            .product_items_images{
+                                width:  264px;
+                                height: 183px;
+                                border-radius: 16px;
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }   
+                            .product_items_name{
+                                h3{
+                                    color: #171725;
+                                    font-family: $font_family;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 24px; 
+                                    letter-spacing: 0.08px;
+                                }
+                            }
+
+                            .product_items_raiting{
+                                @include Flex ($all_items:center,$justfy:start,$direction:row,$gap:5px);
+                                svg{
+                                    width: 18px;
+                                    height: 18px;
+                                    margin-bottom: 15px;
+                                }
+                                span{
+                                    color: #171725;
+                                    font-family: $font_family;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    margin-bottom: 15px;
+                                    line-height: 20px; 
+                                    letter-spacing: 0.06px;
+
+                                }
+                                p{  
+                                    color: #78828A;
+                                    font-family: $font_family;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 20px; 
+                                    letter-spacing: 0.06px;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                    .product_images_down{
+                        @include Flex ($all_items:center,$justfy:start,$direction:row,$gap:24px);
+                        .product_items{
+                            @include Flex ($all_items:start,$justfy:center,$direction:column,$gap:0);
+                            .product_items_images{
+                                width:  264px;
+                                height: 183px;
+                                border-radius: 16px;
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }   
+                            .product_items_name{
+                                h3{
+                                    color: #171725;
+                                    font-family: $font_family;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 24px; 
+                                    letter-spacing: 0.08px;
+                                }
+                            }
+
+                            .product_items_raiting{
+                                @include Flex ($all_items:center,$justfy:start,$direction:row,$gap:5px);
+                                svg{
+                                    width: 18px;
+                                    height: 18px;
+                                    margin-bottom: 15px;
+                                }
+                                span{
+                                    color: #171725;
+                                    font-family: $font_family;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    margin-bottom: 15px;
+                                    line-height: 20px; 
+                                    letter-spacing: 0.06px;
+
+                                }
+                                p{  
+                                    color: #78828A;
+                                    font-family: $font_family;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 20px; 
+                                    letter-spacing: 0.06px;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                }
+
+            }
+            
+        }
+    }
+}

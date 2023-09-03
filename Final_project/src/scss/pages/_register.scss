@@ -1,0 +1,150 @@
+main{
+    #register{
+        .container{
+            max-width: 1400px;
+            .register_left_page{
+                height: 100vh;
+                background-color: $primary_color;
+                .register_page_text{
+                    width: 500px;
+                    padding: 70px;
+                    @include Flex($all_items:start,$justfy:center,$gap:20px,$direction:column);
+                    h1{
+                        font-family: $font_family;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px; 
+                        letter-spacing: 0.16px;
+                        color: #F9F9F9;
+                    }
+                    p{
+                        font-family: $font_family;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px; 
+                        letter-spacing: 0.08px;
+                        color: #F9F9F9;
+
+                    }
+
+                }
+            }
+            .register_right_page{
+                @include Flex($all_items:center,$justfy:center,$gap:40px,$direction:column);
+                .text_banner{
+                    h2{
+                        font-family: $font_family;
+                        color: #171725;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                        letter-spacing: 0.1px;
+                    }
+                }
+                .text_top{
+                    margin-top: 10px;
+                    h1{
+                        font-family: $font_family;
+                        color: #171725;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px;
+                        letter-spacing: 0.16px;
+                    }
+
+                }
+                .register_form{
+                    @include Flex($all_items:center,$justfy:center,$gap:20px,$direction:column);
+                    .register_form_flex{
+                        @include Flex($all_items:start,$justfy:start,$gap:0px,$direction:column);
+                        .username{
+                            @include Flex($all_items:start,$justfy:start,$gap:0px,$direction:column);
+                            @extend %extend_input;
+                            @extend %extend_label;
+                        }
+                        .email{
+                            @include Flex($all_items:start,$justfy:start,$gap:0px,$direction:column);
+                            @extend %extend_input;
+                            @extend %extend_label;
+
+                        }
+                        .password{
+                            @include Flex($all_items:start,$justfy:start,$gap:0px,$direction:column);
+                            @extend %extend_input;
+                            @extend %extend_label;
+                            position: relative;
+                            .streng{
+                                width: 0;
+                                transition: 0.5s ease-in-out;
+                                height: 5px;
+                                
+                            }
+                            
+
+                            .fa-eye{
+                                display: none;
+                            }
+                            .fa-eye-slash,
+                            .fa-eye{
+                                position: absolute;
+                                top: 66px;
+                                right: 20px;
+                                cursor: pointer;
+                            }
+                        }
+                        
+                        
+
+                     
+    
+                    }
+                    
+                  
+                }
+                .register_btn{
+                    margin-top: 10px;
+                    width: 100%;
+                    text-align: center;
+                    a{  
+                        
+                        @include Flex($all_items:center, $justfy:center,$direction:row,$gap:8px);
+                        text-align: center;
+                        text-decoration: none;
+                        button{
+                            width: 501px;
+                            padding: 12px 24px;
+                            border-radius: 24px;
+                            border: 1px solid $primary_color;
+                            transition: 0.3s ease-in-out;
+                            @extend %extend_banner_btn;
+                            }
+                    }
+                   
+
+                }
+                .footer_text{
+                    h5{
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 24px; 
+                        letter-spacing: 0.08px;
+                        color: #9CA4AB;
+                        a{
+                            text-decoration: none;
+                            color: $primary_color;
+                        }
+                        }
+                }
+
+            }
+           
+           
+
+        }
+    }
+}

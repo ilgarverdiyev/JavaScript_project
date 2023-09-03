@@ -36,3 +36,33 @@ line-height: 24px;
 letter-spacing: 0.08px;
 color: $menu_color;
 }
+%extend_logos{
+    padding: 16px 24px;
+    border-radius: 24px;
+    border: 1px solid #727578;
+}
+%extend_label{
+    label{
+        font-family: $font_family;
+        color: #78828A;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0.07px;
+        margin-top: 26px;
+
+    }
+}
+%extend_input{
+    input{
+        padding: 10px 12px;
+        width: 501px;
+        height: 52px;
+        border-radius: 24px;
+        border: 1px solid #E9EBED;
+        background: #F9F9F9;
+        align-items: center;
+        align-self: stretch;
+    }
+}

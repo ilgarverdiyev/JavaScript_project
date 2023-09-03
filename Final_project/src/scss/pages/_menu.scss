@@ -6,9 +6,11 @@ body.dark{
     background-color: #0D0C0F;
     color: #F9F9F9;
 }
-body .dark .switch::before{
+body .dark {
+    .switch::before{
     
-    left: 20px;
+        left: 20px;
+    }
 }
 
 #menu{
@@ -27,12 +29,11 @@ body .dark .switch::before{
                     text-decoration: none;
                     
                     li{
-                        
-                        display: flex;
+                        @include Flex($all_items:center,$gap:28px );
+                       
                         width: 257px;   
                         padding: 8px 0px;
-                        align-items: center;
-                        gap: 28px;
+                        
                         @extend %extend_li_menu;
                         .tooggle{
                             position: relative;
@@ -41,9 +42,7 @@ body .dark .switch::before{
                             width: 45px;
                             height: 25px;
                             background-color: #125ba3;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            @include Flex($all_items:start,$justfy:center, );
                             cursor: pointer;
                             .switch{
                                 position: relative;
@@ -61,8 +60,7 @@ body .dark .switch::before{
                                 background-color: #e4e6e7;
                                 border-radius: 50%;
                                 transform: translateY(-50%);
-                                top: 50%;
-                                
+                                top: 61%;
                                 transition: 0.3s ease-in-out;
                                 
                             }
@@ -178,25 +176,22 @@ body .dark .switch::before{
            
         }
         .logos{
-            width: 778px;
+            // width: 778px;
             padding: 40px 0px;
             .logos_images{
                 .logos_disney{
-                    padding: 16px 24px;
-                    border-radius: 24px;
-                    border: 1px solid #727578;
+                    @extend %extend_logos;
                    }
                 @include Flex($all_items:center, $justfy:space-between,$direction:row,$gap:24px);
-              
-               &_geo{
-                @extend.logos_disney;
-
+                .logos_geo{
+                @extend %extend_logos;
+                
                }
-               &_wars{
-                @extend.logos_disney;
+               .star_wars{
+                @extend %extend_logos;
                }
-               &_marvell{
-                @extend.logos_disney;
+               .logos_marvel{
+                @extend %extend_logos;
                }
             }
 
@@ -294,6 +289,48 @@ body .dark .switch::before{
 
                 }
                 
+            }
+            .read_more{
+                @include Flex($all_items:center, $justfy:center,$direction:row,$gap:10px);
+                button{
+                    @include Flex($all_items:center, $justfy:center,$direction:row,$gap:8px);
+                    width: 274px;
+                    padding: 12px 24px;
+                    border-radius: 24px;
+                    border: 1px solid $primary_color;
+                    background: transparent;
+                    color: $primary_color;
+                    transition: 0.3s ease-in-out;
+                    @extend %extend_banner_btn;
+
+                    
+                }
+                button:hover{
+                    @extend %extend_banner_btn;
+                }
+            }
+            .film_througs{
+                @include Flex($all_items:start, $justfy:start,$direction:column,$gap:10px);
+                .top_text{
+                    h1{
+                        @extend %extend_h1;
+                    }
+                }
+                .bottom_text{
+                    
+                    button{
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        padding: 8px 16px;
+                        border-radius: 16px;
+                        background-color: #F9F9F9;
+                        border: none;
+
+                    }
+                }
+
             }
         }
       
